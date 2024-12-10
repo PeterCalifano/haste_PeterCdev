@@ -5,8 +5,9 @@
 
 # Folders
 examples/example_test
+examples/test_example
 build*
-
+*.ini
 ### C++ ###
 # Prerequisites
 *.d

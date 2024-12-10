@@ -15,3 +15,6 @@ cmake -B build -S . -DCMAKE_BUILD_TYPE=relwithdebinfo -DGUI=true
 
 # Make
 make -C build -j4
+
+# Optionally test using test_example 
+bash test_example.sh
