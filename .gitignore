@@ -3,6 +3,10 @@
 
 # Created by https://www.gitignore.io/api/linux,visualstudiocode,c++,cmake
 
+# Folders
+examples/example_test
+build*
+
 ### C++ ###
 # Prerequisites
 *.d
