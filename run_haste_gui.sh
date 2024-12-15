@@ -7,6 +7,15 @@ events_txt_data=$1
 # Format: fx fy cx cy k1 k2 p1 p2 k3
 calib_txt_data=$2
 
+# --camera_size=WIDTHxHEIGHT
+
+if [ "$#" -lt 3 ]; then
+    echo "Usage: run_haste_gui.sh events.txt calib.txt WIDTHxHEIGHT"
+    echo "Setting default camera size to 512 x 512"
+    camera_size="512x512"
+else
+    camera_size=$3
+fi
 
 
 # Tracking program instructions
@@ -37,4 +46,5 @@ calib_txt_data=$2
 
 # Run the tracking app with the GUI
 ./build/tracking_app_gui --events_file=${events_txt_data} \
-                         --camera_params_file=${calib_txt_data}
+                         --camera_params_file=${calib_txt_data} \
+                         --camera_size=${camera_size}
